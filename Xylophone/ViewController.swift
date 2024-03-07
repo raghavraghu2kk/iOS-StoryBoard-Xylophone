@@ -19,7 +19,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBAction func keyPressed(_ sender: UIButton) {
         let sound : String = (sender.titleLabel?.text)!
+        sender.alpha = 0.5
         playSound(sound)
+        sender.alpha = 1
     }
     
     func playSound(_ sound : String) {
